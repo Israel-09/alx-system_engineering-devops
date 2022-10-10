@@ -1,2 +1,3 @@
-script 1 prints hello world
-Script 2 display's confused smiley
+script 1 displays hello world
+script 2 displays a confused smiley
+script 3 display the content of etc/passwd/
