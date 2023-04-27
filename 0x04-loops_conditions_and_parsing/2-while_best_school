@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+#displays 'Best School' 10 times using while loop
+
+if (( i < 10 ))
+do
+	printf 'Best School'
+done
+
+print "cont"
