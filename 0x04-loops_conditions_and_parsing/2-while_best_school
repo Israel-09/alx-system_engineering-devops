@@ -1,9 +1,10 @@
 #!/usr/bin/env bash
 #displays 'Best School' 10 times using while loop
 
-if (( i < 10 ))
+n=1
+while [ $n -le 10 ]
 do
-	printf 'Best School'
+	echo 'Best School'
+	n=$(( n +1 ))
+	sleep 0.05
 done
-
-print "cont"
