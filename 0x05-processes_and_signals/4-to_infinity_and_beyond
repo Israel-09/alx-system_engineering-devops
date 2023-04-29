@@ -6,5 +6,5 @@ b=2
 while [ $a -le $b ];
 do
 	echo "To infinity and beyond"
-	sleep 2
+	sleep 20
 done
