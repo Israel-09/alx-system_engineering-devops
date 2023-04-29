@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+a=$1
+sleep 17
+pgrep -u root $a
