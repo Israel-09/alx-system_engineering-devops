@@ -2,20 +2,22 @@
 # a bash script that displays the content of the current directory in a list
 # format.
 
-flag=1
+dash=-
 for content in "$1"*;
 do
+	flag=0
 #	echo "$content"
 	for char in $content;
 	do
-		if (( "$char" == "-" ))
+		if [ "$char" = "$dash" ]
 		then
 			flag=1
 		fi
-		if (( $flag == 1))
+		if (( flag == 1))
 		then
-			printf "$char"
+			printf "%s" "$char"
 		fi
 	done
 	echo
 done
+echo $flag
