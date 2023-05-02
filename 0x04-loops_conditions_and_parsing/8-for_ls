@@ -4,7 +4,7 @@
 
 for content in *; do
 	flag=0
-	if [[ "$string" == *-* ]]; then
+	if [[ "$content" == *-* ]]; then
 		for (( i=0; i<${#content}; i++)); do
 			if [ "${content:$i:1}" == "-" ]; then
 				flag=1
@@ -16,7 +16,7 @@ for content in *; do
 		done
 		printf "\n"
 	else
-		echo $content
+		echo "$content"
 	fi
 
 done
