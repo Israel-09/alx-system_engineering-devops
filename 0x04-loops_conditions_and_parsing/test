@@ -1,8 +1,0 @@
-#!/usr/bin/env bash
-#displays 'Best School' 10 times using while loop
-
-n=-
-if (( n == '-' ))
-then
-	print echo
-fi
