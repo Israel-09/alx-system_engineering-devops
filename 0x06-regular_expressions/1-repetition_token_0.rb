@@ -1,7 +1,9 @@
 #!/usr/bin/env ruby
 
-matches = ARGV[0].scan(/hbtt+n/)
+matches = ARGV[0].scan(/hbt{2,5}n/)
 for i in matches do
   print i
 end
-puts ''
+if (matches)
+  puts ''
+end
