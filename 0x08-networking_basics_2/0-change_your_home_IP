@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Bash script that configures an Ubuntu server
+
+sudo su
+sudo sed -i 's/127.0.0.1/127.0.0.2/g' text
+#sudo printf "8.8.8.8\t" >> /etc/hosts
+exit
