@@ -4,4 +4,5 @@
 printf "127.0.0.2	localhost\n" > hosts.new
 printf "8.8.8.8		facebook.com\n" >> hosts.new
 
-cp -f hosts.new /etc/hosts
+cp hosts.new /etc/hosts
+rm hosts.new
