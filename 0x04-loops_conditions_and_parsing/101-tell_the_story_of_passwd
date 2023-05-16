@@ -3,7 +3,7 @@
 
 while read -r line; do
 	printf "The user %s " "$(echo "$line" | cut -d ':' -f 1)"
-	printf "is a part of the %s gang, " "$(echo "$line" | cut -d ':' -f 4)"
+	printf "is part of the %s gang, " "$(echo "$line" | cut -d ':' -f 4)"
 	printf "lives in %s " "$(echo "$line" | cut -d ':' -f 6)"
 	printf "and rides %s. " "$(echo "$line" | cut -d ':' -f 7)"
 	printf "%s's place is protected by the passcode " "$(echo "$line" | cut -d ':' -f 3)"
