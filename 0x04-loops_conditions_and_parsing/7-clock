@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# displays the clock
+
+hr=0
+min=0
+
+for (( hr=0; hr<12; hr++ ))
+do
+	echo "Hour: $hr"
+	for (( min=1; min<60; min++ ))
+	do
+		echo "$min"
+	done
+done
