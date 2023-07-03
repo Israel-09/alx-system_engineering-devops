@@ -2,13 +2,15 @@
 # displays the clock
 
 hr=0
-min=0
 
-for (( hr=0; hr<12; hr++ ))
+while (( hr<12 ))
 do
 	echo "Hour: $hr"
-	for (( min=1; min<60; min++ ))
+	min=1
+	while (( min<60 ))
 	do
 		echo "$min"
+		min=$(( ++min ))
 	done
+	hr=$(( ++hr ))
 done
