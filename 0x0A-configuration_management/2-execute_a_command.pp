@@ -1,6 +1,5 @@
-# a manifest to kill running process, killmenow
-
-exec { 'kill_command':
+# Executes a bash command
+exec { 'kill':
   command => 'pkill -f killmenow',
-  path	  => ['/bin', '/usr/bin']
+  path    => ['/usr/bin', '/usr/sbin']
 }
