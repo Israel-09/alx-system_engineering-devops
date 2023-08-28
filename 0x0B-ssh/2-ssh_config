@@ -1,0 +1,8 @@
+# configiration for server
+Host *
+SendEnv LANG LC_*
+PasswordAuthentication no
+GSSAPIAuthentication yes
+GSSAPIDelegateCredentials no
+HashKnownHosts yes
+IdentityFile ~/.ssh/school
