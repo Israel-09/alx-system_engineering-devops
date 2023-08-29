@@ -10,9 +10,9 @@ if (( ac > 2 )); then
 	if (( ac == 4 )); then
 		key=$4
 	
-		scp -i "$key" -o StrictHostKeyChecking=No "$file" "$user@$ip:~/"
+		scp -i "$key" -o StrictHostKeyChecking=no "$file" "$user@$ip:~/"
 	elif (( ac == 3)); then
-		scp -o StrictHostKeyChecking=No "$file" "$user@$ip:~/"
+		scp -o StrictHostKeyChecking=no "$file" "$user@$ip:~/"
 	fi
 else
 	echo "Usage: 0-transfer_file PATH_TO_FILE IP USERNAME PATH_TO_SSH_KEY"
