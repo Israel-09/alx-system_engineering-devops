@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+# install nginx on a server and configure it
+
+apt-get update
+apt-get -y install nginx
+
+echo "Hello World!" > /var/www/html/index.html
+
+#configure the web server to redirect
+new_string="server_name _;\n\trewrite ^redirect_me https:\/\/www.youtube.com/watch?v=QH2-TGUlwu4 permanent;"
+sed -i "s/server_name _;/$new_string/" /etc/nginx/sites-enabled/default
+
+#configure a custom error_page for the web server
+echo "Ceci n'est pas une page" > /var/www/html/error_404.html
+err_string="listen 80 default_server;\n\terror_page 404 /error_404.html;"
+sed -i "s/listen 80 default_server;/$err_string/" /etc/nginx/sites-enabled/default
+
+service nginx restart
