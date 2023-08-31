@@ -5,13 +5,13 @@ package { 'nginx':
 }
 
 file { 'root page':
-  ensure => 'present',
-  path => '/var/www/html/index.html',
+  ensure  => 'present',
+  path    => '/var/www/html/index.html',
   content => 'Hello World!',
 }
 
 file_line { 'configure redirect':
-  path => '/etc/nginx/sites-enabled/default',
-  line => "server_name _;\n\trewrite ^redirect_me https:\/\/www.youtube.com/watch?v=QH2-TGUlwu4 permanent;",
+  path  => '/etc/nginx/sites-enabled/default',
+  line  => "server_name _;\n\trewrite ^redirect_me https:\/\/www.youtube.com/watch?v=QH2-TGUlwu4 permanent;",
   match => 'server_name _;',
 }
