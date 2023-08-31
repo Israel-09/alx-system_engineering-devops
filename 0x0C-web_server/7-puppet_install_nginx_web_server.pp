@@ -5,7 +5,7 @@ package { 'nginx':
 }
 
 exec { 'allow https':
-  command =>	"sudo apt-get -y ufw; usr/sbin/ufw allow 'Nginx HTTP'",
+  command  =>	"sudo apt-get -y ufw; usr/sbin/ufw allow 'Nginx HTTP'",
   provider => shell,
 }
 
@@ -20,3 +20,7 @@ file_line { 'configure redirect':
   line  => "server_name _;\n\trewrite ^redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;",
   match => 'server_name _;',
 }
+
+exec { 'start nginx':
+  command  => 'service nginx restart',
+  provider => shell
