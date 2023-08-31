@@ -5,7 +5,8 @@ package { 'nginx':
 }
 
 exec { 'allow https':
-  command =>	"usr/sbin/ufw allow 'Nginx HTTP'",
+  command =>	"sudo apt-get -y ufw; usr/sbin/ufw allow 'Nginx HTTP'",
+  provider => shell,
 }
 
 file { 'root page':
