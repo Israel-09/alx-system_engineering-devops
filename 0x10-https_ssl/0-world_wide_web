@@ -2,8 +2,9 @@
 # a Bash script that will display information about subdomains
 
 dig_web() {
-	printf "The subdomain %s " "$2"
-	dig "$2.$1" | awk  '/\S+\s+[0-9]+\s+IN/{printf "is a %s record and points to %s\n", $4, $5}'
+	dig "$2.$1" | awk -v sub_dom="$2" '/\S+\s+[0-9]+\s+IN/{
+		printf "The subdomain %s is a %s record and points to %s\n", sub_dom, $4, $5
+	}'
 }
 
 if [ "$2" ]; then
