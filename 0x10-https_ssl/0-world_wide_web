@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# a Bash script that will display information about subdomains
+
+dig_web() {
+	printf "The subdomain %s ", "$2"
+	dig "$2.$1" | awk  '/\S+\s+[0-9]+\s+IN/{printf "is a %s record and points to %s\n", $4, $5}'
+}
+
+if [ "$2" ]; then
+	dig_web "$1" "$2"
+else
+	dig_web "$1" 'www'
+	dig_web "$1" 'lb-01'
+	dig_web "$1" 'web-01'
+	dig_web "$1" 'web-02'
+fi
