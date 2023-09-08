@@ -1,7 +1,4 @@
 #!/usr/bin/env bash
 # fix a big on a webstack container
-
-pkill -f nginx
-rm -f /etc/nginx/sites-enabled/default
-ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled
+ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled
 service nginx start
