@@ -1,12 +1,11 @@
-#!/usr/bin/env bash
-# configures a server to allow connection from 
-# only port 22, 443, and 80
-
-sudo apt-get update
-sudo apt-get install ufw
+sudo apt-get update -y
+sudo apt-get install ufw -y
+sudo ufw disable
 sudo ufw default deny incoming
-sudo ufw default allow outgoing
+sudo ufw defaulti allow outgoing
 sudo ufw default allow 344
 sudo ufw default allow 22
 sudo ufw default allow 80
 sudo ufw enable
+
+
