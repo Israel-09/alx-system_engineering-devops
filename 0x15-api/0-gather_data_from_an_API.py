@@ -1,7 +1,10 @@
 #!/usr/bin/python3
 '''
-gets employee infirmation on tasks
+gets employee information on tasks
+and give output on completed tasks
 '''
+
+
 import requests
 from sys import argv
 
