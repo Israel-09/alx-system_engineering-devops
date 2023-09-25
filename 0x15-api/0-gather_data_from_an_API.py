@@ -1,8 +1,5 @@
 #!/usr/bin/python3
-'''
-gets employee information on tasks
-and give output on completed tasks
-'''
+'''gets employee information on tasks and give output on completed tasks'''
 
 
 import requests
