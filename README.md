@@ -1,4 +1,4 @@
-# ALX-SYSTEM_ENGINEERING_DEVEOPS
+# ALX-SYSTEM_ENGINEERING_DEVOPS
 contains programs on devops and system engineering
 mostly bash scripts
 
