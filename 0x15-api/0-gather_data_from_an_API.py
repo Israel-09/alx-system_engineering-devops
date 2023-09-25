@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 '''
-
+gets employee infirmation on tasks
 '''
 import requests
 from sys import argv
