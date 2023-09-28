@@ -23,4 +23,5 @@ if __name__ == '__main__':
     with open(filename, 'w') as employee_file:
         employee_writer = csv.writer(employee_file, quoting=csv.QUOTE_ALL)
         for todo in todos:
-            employee_writer.writerow([u_id, username, todo.get('completed'), todo.get('title')])
+            employee_writer.writerow([u_id, username,
+                                     todo.get('completed'), todo.get('title')])
