@@ -16,10 +16,11 @@ def number_of_subscribers(subreddit):
     '''
     if subreddit is None or str(subreddit).isalpha() is False:
         return 0
-    
+
     headers = {'User-Agent': "Microsoft edge 117.0.2045.47"}
     url = "https://www.reddit.com/r/{}/about.json".format(subreddit)
     response = requests.get(url, headers=headers)
+
     try:
         return (response.json().get("data").get("subscribers"))
     except Exception:
