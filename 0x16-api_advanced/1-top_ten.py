@@ -16,8 +16,9 @@ def top_ten(subreddit):
         return
 
     headers = {'User-Agent': "Microsoft edge 117.0.2045.47"}
-    url = "https://www.reddit.com/r/{}.json?limit=8".format(subreddit)
-    response = requests.get(url, headers=headers)
+    params = {'limit': 9}
+    url = "https://www.reddit.com/r/{}/hot.json".format(subreddit)
+    response = requests.get(url, headers=headers, params=params)
 
     try:
         data = response.json().get("data")
