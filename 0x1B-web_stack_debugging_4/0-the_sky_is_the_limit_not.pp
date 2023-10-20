@@ -6,6 +6,6 @@ exec { 'increase the limit':
 }
 
 exec { 'nginx-restart':
-  command => 'service nginx restart',
+  command  => 'service nginx restart',
   provider => 'shell',
 }
