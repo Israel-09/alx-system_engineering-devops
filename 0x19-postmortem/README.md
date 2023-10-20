@@ -15,7 +15,7 @@ On 14th October, 2023, our DevOps team was confronted with a critical challenge 
 - `ULIMIT`, a crucial parameter governing user process resource limits in Unix-based systems, had an inadequately low default setting on our web server.
 - This left our server ill-equipped to handle the surging user load, leading to poor response times, degraded user experience, and, in severe cases, server crashes.
 
-!(granny with many open tabs)[https://4.bp.blogspot.com/--v8xaxwow80/Vp1_z5QDC-I/AAAAAAACpoU/DNJ2WhquuCc/s640/IMG_2874.JPG]
+![granny with many open tabs](https://4.bp.blogspot.com/--v8xaxwow80/Vp1_z5QDC-I/AAAAAAACpoU/DNJ2WhquuCc/s640/IMG_2874.JPG)
 
 ### Challenges Faced
 
