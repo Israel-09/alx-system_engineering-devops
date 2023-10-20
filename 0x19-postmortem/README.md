@@ -71,3 +71,6 @@ To maintain a resilient and well-configured infrastructure, we have outlined a s
    - Detailed incident response plans, specifically for configuration-related incidents, will be developed to ensure effective and prompt resolution.
 
 The low `ULIMIT` setting emerged as the key factor behind the performance issues that triggered a surge in user complaints. By increasing `ULIMIT` settings and implementing proactive configuration management strategies, we successfully resolved the issue, thereby enhancing server performance and reliability. We commit to maintaining comprehensive documentation, investing in training and automation, and ensuring that regular configuration reviews remain a cornerstone of our infrastructure management. This postmortem report serves as a crucial learning experience, underscoring the significance of configuration management and proactive monitoring in maintaining a resilient and dependable infrastructure.
+
+## link
+[word Documentation](https://docs.google.com/document/d/1pcMyLaFOnuZg4tvr7ABrBa0cE1DIPs1vke5XgPx8D70/edit?usp=sharing)
