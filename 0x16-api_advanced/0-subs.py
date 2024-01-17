@@ -4,13 +4,13 @@ import requests
 
 
 def number_of_subscribers(subreddit):
-    """gets the number of subscribers to 
+    """gets the number of subscribers to
     a subreddit
 
     Args:
         subreddit (str): string of the subreddit.
     Return:
-        on success return the number of subcribers to the 
+        on success return the number of subcribers to the
         subreddit otherwise return 0.
     """
     headers = {
