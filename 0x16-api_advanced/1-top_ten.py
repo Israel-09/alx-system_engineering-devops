@@ -1,24 +1,29 @@
 #!/usr/bin/python3
-"""web scrapping lessons"""
-from requests import get
+'''
+retrives information from reddit api
+'''
+
+import requests
 
 
 def top_ten(subreddit):
-    """prints the title of the first ten hot subreddit post"""
-    uri = "https://www.reddit.com/r/{}/hot.json".format(subreddit)
-    headers = {
-                "User-Agent": "python-requests/2.31.0"
-              }
+    '''retrieves top ten post from a subreddit
+    Args:
+        subreddit (str): the subreddit
+    '''
+    if subreddit is None or str(subreddit).isalpha() is False:
+        print("None")
+        return
 
-    r = get(uri, headers=headers)
+    headers = {'User-Agent': "Microsoft edge 117.0.2045.47"}
+    params = {'limit': 10}
+    url = "https://www.reddit.com/r/{}/hot/.json".format(subreddit)
+    response = requests.get(url, headers=headers, params=params)
 
     try:
-        if r.status_code != 200:
-            print(None)
-        else:
-            posts = r.json().get('data').get('children')
-            for i in range(10):
-                title = posts[i].get('data').get('title')
-                print(title)
+        data = response.json().get("data")
+        posts = data.get("children")
+        for post in posts:
+            print(post.get('data').get('title'))
     except Exception:
-        print(None)
+        print("None")
