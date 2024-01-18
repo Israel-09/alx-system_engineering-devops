@@ -1,29 +1,26 @@
 #!/usr/bin/python3
-"""web scrapping"""
+'''
+retrives information from reddit api
+'''
 import requests
 
 
 def number_of_subscribers(subreddit):
-    """gets the number of subscribers to
-    a subreddit
-
+    '''number of a subreddit subscriber
     Args:
-        subreddit (str): string of the subreddit.
+        subreddit (str): the subreddit
     Return:
-        on success return the number of subcribers to the
-        subreddit otherwise return 0.
-    """
-    headers = {
-                "User-Agent": "python-requests/2.31.0"
-              }
+        On success the amount of subscribers
+        otherwise 0
+    '''
+    if subreddit is None or str(subreddit).isalpha() is False:
+        return 0
+
+    headers = {'User-Agent': "Microsoft edge 117.0.2045.47"}
     url = "https://www.reddit.com/r/{}/about.json".format(subreddit)
     response = requests.get(url, headers=headers)
+
     try:
-        if response.status_code != 200:
-            return 0
-        else:
-            json_body = response.json()
-            no_of_subs = json_body.get('data').get("subscribers")
-            return (no_of_subs)
-    except Exception as e:
+        return (response.json().get("data").get("subscribers"))
+    except Exception:
         return 0
