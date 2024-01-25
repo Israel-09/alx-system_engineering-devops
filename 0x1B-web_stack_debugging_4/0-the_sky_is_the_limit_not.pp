@@ -3,11 +3,11 @@
 
 #uncrease the ulmit
 exec {'increase ulmit':
-  command => 'sed -i "s/15/4096"/ /etc/default/nginx',
+  command  => 'sed -i "s/15/4096"/ /etc/default/nginx',
   provider => shell
 }
 
 exec {'restart the server':
-  command => "sudo service nginx restart",
+  command  => 'sudo service nginx restart',
   provider => shell
 }
